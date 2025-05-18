@@ -1,0 +1,40 @@
+/* Home.css */
+
+div {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .livequiz-container {
+    display: grid;
+    /* background-color:rgb(82, 32, 245); */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .livequiz-container > * {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .quizbox{
+    background:rgba(21, 111, 192,.9);
+  }
+  .livequiz-container > *:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .total-quiz {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+  }
+  

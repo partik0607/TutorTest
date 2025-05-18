@@ -1,0 +1,32 @@
+.question-card {
+    background: #fff;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .question-header {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .question-number {
+    color: #2b7a78;
+    margin-right: 8px;
+  }
+  
+  .options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .option-item {
+    font-size: 1rem;
+    cursor: pointer;
+    padding-left: 5px;
+  }
+  

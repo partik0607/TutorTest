@@ -1,0 +1,132 @@
+.showquiz-container {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .showquiz-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .showquiz-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .showquiz-details {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .showquiz-details p {
+    margin: 5px 0;
+  }
+  
+  .questions-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .question-item {
+    background-color: #fff;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .question-item h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .options-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .options-list li {
+    background-color: #eef2f7;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .options-list li:hover {
+    background-color: #e0e7ff;
+  }
+  .Answer {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4caf50; /* Green color for the correct answer */
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color:rgb(58, 61, 59);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }.questions-container {
+  max-height: 600px; /* You can adjust this height */
+  overflow-y: auto;
+  padding-right: 10px; /* optional: avoids hiding scrollbar */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Optional: Customize scrollbar for Webkit browsers */
+.questions-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.questions-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.questions-container::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 8px;
+}
+
+.questions-container::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+.submissions-container {
+  overflow-x: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submissions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.submissions-table th,
+.submissions-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.submissions-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.submissions-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
