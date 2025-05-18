@@ -12,7 +12,6 @@ connectDB();
 const app = express();
 
 // Middleware
-app.options("*", cors()); // Pre-flight support
 app.use(
   cors({
     origin: ["https://tutortest-frontend.onrender.com", "http://localhost:3000"],
