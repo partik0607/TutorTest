@@ -13,7 +13,7 @@ const CustomQuizProvider = ({ children }) => {
     const fetchQuizzes = async () => {
       const token = localStorage.getItem('auth-token')
       try {
-        const response = await fetch('http://localhost:5001/api/v1/allquizes', {
+        const response = await fetch('https://tutortest.onrender.com/api/v1/allquizes', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`, // Attach the token
@@ -36,7 +36,7 @@ const CustomQuizProvider = ({ children }) => {
      const fetchusers = async () => {
       const token = localStorage.getItem('auth-token')
       try {
-        const response = await fetch('http://localhost:5001/api/v1/allusers', {
+        const response = await fetch('https://tutortest.onrender.com/api/v1/allusers', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`, // Attach the token
@@ -90,7 +90,7 @@ const CustomQuizProvider = ({ children }) => {
       }
       console.log(quizData)
       // Send the quiz data to the backend
-      const response = await fetch('http://localhost:5001/api/v1/add-quiz', {
+      const response = await fetch('https://tutortest.onrender.com/api/v1/add-quiz', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

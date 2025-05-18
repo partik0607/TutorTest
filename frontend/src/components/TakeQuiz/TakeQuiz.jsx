@@ -8,7 +8,7 @@ function TakeQuiz() {
 
   useEffect(() => {
     const fetchQuiz = async () => {
-      const res = await fetch(`http://localhost:5001/api/v1/quiz/${quizId}`);
+      const res = await fetch(`https://tutortest.onrender.com/api/v1/quiz/${quizId}`);
       const data = await res.json();
       if(data)setQuiz(data);
     };
@@ -23,7 +23,7 @@ function TakeQuiz() {
   const userid=localStorage.getItem('user-id');
   const handleSubmit = async () => {
     // {console.log(answers)};
-    const res = await fetch(`http://localhost:5001/api/v1/submit/${quizId}`, {
+    const res = await fetch(`https://tutortest.onrender.com/api/v1/submit/${quizId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

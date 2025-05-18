@@ -10,7 +10,7 @@ function Quiz({ quiz }) {
     const fetchUser = async () => {
       try {
         const token=localStorage.getItem('auth-token');
-        const res = await fetch(`http://localhost:5001/api/v1/by-id?createdBy=${createdBy}`, {
+        const res = await fetch(`https://tutortest.onrender.com/api/v1/by-id?createdBy=${createdBy}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`, 
