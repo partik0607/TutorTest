@@ -12,15 +12,12 @@ connectDB();
 const app = express();
 
 // Middleware
-const allowedOrigins = [
-  "https://tutortest-frontend.onrender.com",
-  "http://localhost:3000"
-];
-
+app.options("*", cors()); // Pre-flight support
 app.use(
   cors({
-    origin: allowedOrigins,
-    credentials: true, // Allows cookies and credentials
+    origin: ["https://tutortest-frontend.onrender.com", "http://localhost:3000"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"],
   })
 );
 app.use(express.json());
