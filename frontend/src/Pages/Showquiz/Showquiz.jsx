@@ -1,6 +1,6 @@
 import {React,useContext} from 'react';
 import { useLocation } from 'react-router-dom';
-import './ShowQuiz.css'; // Import the CSS file
+import './Showquiz.css'; // Import the CSS file
 import { Link } from 'react-router-dom';
 import { quizcontext } from '../../context/Quiz-context';
 
