@@ -12,7 +12,17 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+const allowedOrigins = [
+  "https://tutortest-frontend.onrender.com",
+  "http://localhost:3000"
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true, // Allows cookies and credentials
+  })
+);
 app.use(express.json());
 
 // Routes
