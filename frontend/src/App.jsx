@@ -48,7 +48,7 @@ function App() {
 
           {/* Protected Routes */}
           <Route
-            path="/home"
+            path="/Home"
             element={
               <PrivateRoute>
                 <Home />

@@ -113,7 +113,7 @@ const CustomQuizProvider = ({ children }) => {
   
       if (data.success) {
         alert("Quiz created successfully!");
-        window.location.replace("/home"); // Redirect to quiz list or another page
+        window.location.replace("/Home"); // Redirect to quiz list or another page
       } else {
         alert(data.errors || "Failed to create quiz");
       }

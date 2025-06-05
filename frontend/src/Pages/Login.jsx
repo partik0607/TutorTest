@@ -32,7 +32,7 @@ const LoginSignup = () => {
           localStorage.setItem('user-email', data.email);
           localStorage.setItem('user-username', data.username);
           console.log(data);
-          window.location.replace("/home");
+          window.location.replace("/Home");
         } else {
           alert(data.errors || "Login failed");
         }
@@ -69,7 +69,7 @@ const LoginSignup = () => {
         localStorage.setItem('user-id', data._id);
         localStorage.setItem('user-email', data.email);
         localStorage.setItem('user-username', data.username);
-          window.location.replace("/home");
+          window.location.replace("/Home");
         } else {
           alert(data.errors || "Signup failed");
         }
