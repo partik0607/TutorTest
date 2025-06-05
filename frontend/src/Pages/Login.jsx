@@ -12,14 +12,14 @@ const LoginSignup = () => {
 
     const login = async () => {
       try {
-        const response = await fetch('https://tutortest.onrender.com/api/v1/login', {
+       const response = await fetch('https://tutortest.onrender.com/api/v1/login', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(formData),
-          // console.log(formData);
+          credentials: 'include' // 🔥 THIS IS MANDATORY IF backend uses credentials
         });
     
         const data = await response.json();
@@ -57,8 +57,9 @@ const LoginSignup = () => {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(formData),
+          credentials: 'include'
         });
-    
+        
         const data = await response.json();
         console.log(data);
     

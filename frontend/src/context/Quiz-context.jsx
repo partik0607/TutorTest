@@ -18,6 +18,7 @@ const CustomQuizProvider = ({ children }) => {
           headers: {
             'Authorization': `Bearer ${token}`, // Attach the token
           },
+          credentials: 'include'
         });
 
         if (response.ok) {
@@ -36,11 +37,13 @@ const CustomQuizProvider = ({ children }) => {
      const fetchusers = async () => {
       const token = localStorage.getItem('auth-token')
       try {
-        const response = await fetch('https://tutortest.onrender.com/api/v1/allusers', {
+       const response = await fetch('https://tutortest.onrender.com/api/v1/allusers', {
           method: 'GET',
+          credentials: 'include', // include cookies with the request
           headers: {
-            'Authorization': `Bearer ${token}`, // Attach the token
+            'Content-Type': 'application/json'
           },
+          credentials: 'include'
         });
 
         if (response.ok) {
@@ -98,6 +101,7 @@ const CustomQuizProvider = ({ children }) => {
           'Authorization': `Bearer ${token}`, // Attach the token
         },
         body: JSON.stringify(quizData),
+        credentials: 'include'
       });
   
       // Check if the response is okay (status code 200-299)

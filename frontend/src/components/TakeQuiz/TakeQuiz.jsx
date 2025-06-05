@@ -8,7 +8,11 @@ function TakeQuiz() {
 
   useEffect(() => {
     const fetchQuiz = async () => {
-      const res = await fetch(`https://tutortest.onrender.com/api/v1/quiz/${quizId}`);
+      const res = await fetch(`https://tutortest.onrender.com/api/v1/quiz/${quizId}`,
+        {
+          credentials: 'include'
+        }
+      );
       const data = await res.json();
       if(data)setQuiz(data);
     };
@@ -30,6 +34,7 @@ function TakeQuiz() {
         'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify({ answers,id:userid }),
+      credentials: 'include'
     });
 
     const result = await res.json();
