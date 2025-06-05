@@ -43,13 +43,19 @@ export const authUser = async (req, res) => {
   const user = await User.findOne({ email });
   // console.log(user);
   if (user && (await bcrypt.compare(password, user.password))) {
+        var token = generateToken(user._id);
+          res.cookie("token", token, {
+            httpOnly: true,
+            secure: true, // 🔐 MUST be true in production (HTTPS)
+            sameSite: "None", // Required for cross-origin cookies
+          });
     res.json({
       _id: user._id,
       username: user.username,
       usertype:user.usertype,
       email: user.email,
       success:true,
-      token: generateToken(user._id),
+      token: token,
     });
   } else {
     res.status(401).json({ message: "Invalid email or password" });
