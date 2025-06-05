@@ -14,10 +14,10 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: ["https://tutortest-frontend.onrender.com", "http://localhost:5173"],
+    origin: ["https://tutortest-frontend.onrender.com", "http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type"],
-    credentials: true // 🔥 THIS IS IMPORTANT
+    allowedHeaders: ["Content-Type", "Authorization"], 
+    credentials: true
   })
 );
 app.use(express.json());
