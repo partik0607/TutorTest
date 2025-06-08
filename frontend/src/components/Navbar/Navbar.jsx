@@ -15,7 +15,7 @@ function Navbar() {
             </div>
       </div>
       <ul  className="nav-menu">
-        {Student=="True"?<></>:<li><Link to='/Home' className="no-underline">HOME</Link></li>}
+        {Student=="True"?<></>:<li><Link to='/home' className="no-underline">HOME</Link></li>}
         {Student=="True"?<></>:<li><Link to='/create-quiz'className="no-underline">Create</Link></li>}
         {Student=="True"?<></>:<li><Link to='/prev-quiz'className="no-underline">Ongoing</Link></li>}
         {Student=="True"?<></>:<li><Link to='/upcomming-quiz'className="no-underline">Upcoming</Link></li>}
