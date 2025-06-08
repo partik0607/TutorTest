@@ -2,7 +2,7 @@ import "./App.css";
 import Test4 from "./components/test/Test";
 import ProtectedRoute from "./components/privatequiz";
 import LoginSignup from "./Pages/Login";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 import PrivateRoute from "./components/PrivateRoute";
@@ -39,96 +39,94 @@ import Allquiz from "./Pages/All-Quiz/Allquiz";
 function App() {
   return (
     <CustomQuizProvider>
-      <Router>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Navbar />
-                <Home />
-              </>
-            }
-          />
-          <Route path="/login" element={<LoginSignup />} />
-          <Route path="/test-login" element={<TestLoginSignup />} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Home />
+            </>
+          }
+        />
+        <Route path="/login" element={<LoginSignup />} />
+        <Route path="/test-login" element={<TestLoginSignup />} />
 
-          {/* Protected Routes */}
-          <Route
-            path="/home"
-            element={
-              <PrivateRoute>
-                <Navbar />
-                <Home />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/allquiz"
-            element={
-              <PrivateRoute>
-                <Navbar />
-                <Allquiz />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/take-quiz/:quizId"
-            element={
-              <ProtectedRoute>
-                <Navbar />
-                <TakeQuiz />
-              </ProtectedRoute>
-            }
-          />
+        {/* Protected Routes */}
+        <Route
+          path="/home"
+          element={
+            <PrivateRoute>
+              <Navbar />
+              <Home />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/allquiz"
+          element={
+            <PrivateRoute>
+              <Navbar />
+              <Allquiz />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/take-quiz/:quizId"
+          element={
+            <ProtectedRoute>
+              <Navbar />
+              <TakeQuiz />
+            </ProtectedRoute>
+          }
+        />
 
-          <Route
-            path="/showquiz"
-            element={
-              <PrivateRoute>
-                <Navbar />
-                <Showquiz />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/create-quiz"
-            element={
-              <PrivateRoute>
-                <Navbar />
-                <QuizForm />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/add-questions"
-            element={
-              <PrivateRoute>
-                <Navbar />
-                <QuestionBuilder />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/prev-quiz"
-            element={
-              <PrivateRoute>
-                <Navbar />
-                <Oldquiz />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/upcomming-quiz"
-            element={
-              <PrivateRoute>
-                <Navbar />
-                <Upcommingquiz />
-              </PrivateRoute>
-            }
-          />
-        </Routes>
-      </Router>
+        <Route
+          path="/showquiz"
+          element={
+            <PrivateRoute>
+              <Navbar />
+              <Showquiz />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/create-quiz"
+          element={
+            <PrivateRoute>
+              <Navbar />
+              <QuizForm />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/add-questions"
+          element={
+            <PrivateRoute>
+              <Navbar />
+              <QuestionBuilder />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/prev-quiz"
+          element={
+            <PrivateRoute>
+              <Navbar />
+              <Oldquiz />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/upcomming-quiz"
+          element={
+            <PrivateRoute>
+              <Navbar />
+              <Upcommingquiz />
+            </PrivateRoute>
+          }
+        />
+      </Routes>
     </CustomQuizProvider>
   );
 }

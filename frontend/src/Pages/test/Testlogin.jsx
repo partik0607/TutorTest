@@ -35,9 +35,10 @@ const TestLoginSignup = () => {
           localStorage.setItem('user-email', data.email);
           localStorage.setItem('user-username', data.username);
           console.log(data);
+           window.location.href = "/home";
         //   window.location.replace("/Home");
         setState("Login");
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
         } else {
           alert(data.errors || "Login failed");
         }
@@ -74,6 +75,7 @@ const TestLoginSignup = () => {
         localStorage.setItem('user-email', data.email);
         localStorage.setItem('user-username', data.username);
         //   window.location.replace("/Home");
+         window.location.href = "/home";
         setState("Sign Up");
         navigate(from, { replace: true });
         } else {
