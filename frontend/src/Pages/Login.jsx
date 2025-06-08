@@ -43,7 +43,8 @@ const LoginSignup = () => {
         localStorage.setItem("user-username", data.username);
         console.log(data);
         // navigate("/home");
-        window.location.href = "/home"
+        // window.location.href = "/home"
+        navigate("/home", { replace: true });
         // window.location.replace("/home");
       } else {
         alert(data.errors || "Login failed");
@@ -85,8 +86,8 @@ const LoginSignup = () => {
         localStorage.setItem("user-email", data.email);
         localStorage.setItem("user-username", data.username);
         // window.location.replace("/home");
-
-        window.location.href = "/home"
+        navigate("/home", { replace: true });
+        // window.location.href = "/home"
         
         // navigate("/home");
       } else {

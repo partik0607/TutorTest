@@ -128,7 +128,8 @@ const CustomQuizProvider = ({ children }) => {
       if (data.success) {
         alert("Quiz created successfully!");
         // navigate("/home");
-        window.location.href = "/home";
+        // window.location.href = "/home";
+         navigate("/home", { replace: true });
         // window.location.replace("/Home"); // Redirect to quiz list or another page
       } else {
         alert(data.errors || "Failed to create quiz");

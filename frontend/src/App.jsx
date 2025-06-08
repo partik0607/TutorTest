@@ -56,74 +56,74 @@ function App() {
         <Route
           path="/home"
           element={
-            <PrivateRoute>
+            <>
               <Navbar />
               <Home />
-            </PrivateRoute>
+            </>
           }
         />
         <Route
           path="/allquiz"
           element={
-            <PrivateRoute>
+            <>
               <Navbar />
               <Allquiz />
-            </PrivateRoute>
+            </>
           }
         />
         <Route
           path="/take-quiz/:quizId"
           element={
-            <ProtectedRoute>
+            <>
               <Navbar />
               <TakeQuiz />
-            </ProtectedRoute>
+            </>
           }
         />
 
         <Route
           path="/showquiz"
           element={
-            <PrivateRoute>
+            <>
               <Navbar />
               <Showquiz />
-            </PrivateRoute>
+            </>
           }
         />
         <Route
           path="/create-quiz"
           element={
-            <PrivateRoute>
+            <>
               <Navbar />
               <QuizForm />
-            </PrivateRoute>
+            </>
           }
         />
         <Route
           path="/add-questions"
           element={
-            <PrivateRoute>
+            <>
               <Navbar />
               <QuestionBuilder />
-            </PrivateRoute>
+            </>
           }
         />
         <Route
           path="/prev-quiz"
           element={
-            <PrivateRoute>
+            <>
               <Navbar />
               <Oldquiz />
-            </PrivateRoute>
+            </>
           }
         />
         <Route
           path="/upcomming-quiz"
           element={
-            <PrivateRoute>
+            <>
               <Navbar />
               <Upcommingquiz />
-            </PrivateRoute>
+            </>
           }
         />
       </Routes>
